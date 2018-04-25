@@ -24,8 +24,10 @@ class FetchData extends React.Component<WeatherForecastProps, {}> {
     }
 
     public render() {
+        let currnetMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
         return <div>
-            <h1>Weather forecast</h1>
+            <h1>Period: { currnetMonth }.{ currentYear }</h1>
             <p>This component demonstrates fetching data from the server and working with URL parameters.</p>
             { this.renderForecastsTable() }
             { this.renderPagination() }

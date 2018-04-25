@@ -4,7 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vm-code-smell", "vm-code-sm
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		dotnet2|Any CPU = dotnet2|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A50CE70-0DFC-44C5-AC0B-10458F367210}.dotnet2|Any CPU.ActiveCfg = dotnet2|Any CPU
+		{3A50CE70-0DFC-44C5-AC0B-10458F367210}.dotnet2|Any CPU.Build.0 = dotnet2|Any CPU
 	EndGlobalSection
 EndGlobal
