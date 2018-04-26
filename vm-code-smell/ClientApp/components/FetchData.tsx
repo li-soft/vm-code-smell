@@ -3,6 +3,7 @@ import { Link, RouteComponentProps } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ApplicationState }  from '../store';
 import * as WeatherForecastsState from '../store/WeatherForecasts';
+import Home from "./Home";
 
 // At runtime, Redux will merge together...
 type WeatherForecastProps =
