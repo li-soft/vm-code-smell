@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using vm_code_smell.Repositories;
+using vm_code_smell.Services.Buisness;
+using vm_code_smell.Services.Domain;
 
 namespace vm_code_smell
 {
@@ -23,6 +26,11 @@ namespace vm_code_smell
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddTransient<ITimesheetBuisnessService, TimesheetBuisnessService>();
+            services.AddTransient<ITimesheetDomainService, TimesheetDomainService>();
+            services.AddTransient<ITimesheetRepository, TimesheetRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

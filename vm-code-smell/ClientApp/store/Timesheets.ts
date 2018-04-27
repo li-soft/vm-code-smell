@@ -51,7 +51,7 @@ export const actionCreators = {
 
     deleteTimesheet: (entryId: number): AppThunkAction<KnownAction> => 
         (dispatch) => {
-        let request = new Request(`api/Timesheet/DeleteTimesheetEntry?id=${ entryId }`);
+        let request = new Request(`api/Timesheet/DeleteTimesheetEntry?id=${ entryId }`, { method: "DELETE"});
             let deleteTask = fetch(request);
 
             addTask(deleteTask); // Ensure server-side prerendering waits for this to complete
@@ -67,7 +67,7 @@ export const actionCreators = {
         },
     
     addNewEntry: (): AppThunkAction<KnownAction> => (dispatch) => {
-        let request = new Request(`api/Timesheet/AddNew`);
+        let request = new Request(`api/Timesheet/AddNew`, { method: "POST"});
         let newEntryTask = fetch(request);
 
         addTask(newEntryTask); // Ensure server-side prerendering waits for this to complete
